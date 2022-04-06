@@ -1,22 +1,24 @@
 using Project1.Inputs;
 using System.Collections;
 using System.Collections.Generic;
+using Project1.Contollers;
+using Project1.Movements;
 using UnityEngine;
 
 namespace Project1.Contollers
 {
     public class PlayerController : MonoBehaviour
     {
-        [SerializeField] float _force;
-        private Rigidbody _rigidbody;
+        
         DefaultInput _input;
+        Mover _mover;
 
         bool _isForceUp;
 
         private void Awake()
-        {
-            _rigidbody = GetComponent<Rigidbody>();
+        {            
             _input = new DefaultInput();
+            _mover = new Mover(rigidbody: GetComponent<Rigidbody>());
         }
 
         private void Update()
@@ -38,7 +40,7 @@ namespace Project1.Contollers
             //fizik islemleri
             if (_isForceUp)
             {
-                _rigidbody.AddForce(Vector3.up * Time.deltaTime* _force);
+                _mover.FixedTick();
             }
         }
     }
