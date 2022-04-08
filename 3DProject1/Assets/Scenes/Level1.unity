@@ -895,14 +895,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 943969819924535094, guid: a3f3b82c4f4c5cd41beb62b63e346319, type: 3}
-      propertyPath: m_Constraints
-      value: 56
-      objectReference: {fileID: 0}
-    - target: {fileID: 943969819924535094, guid: a3f3b82c4f4c5cd41beb62b63e346319, type: 3}
-      propertyPath: m_CollisionDetection
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 1864731387523681922, guid: a3f3b82c4f4c5cd41beb62b63e346319, type: 3}
       propertyPath: m_Name
       value: Player
@@ -955,10 +947,6 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 1302765202}
-    - target: {fileID: 3666288283349409678, guid: a3f3b82c4f4c5cd41beb62b63e346319, type: 3}
-      propertyPath: _force
-      value: 80
-      objectReference: {fileID: 0}
     - target: {fileID: 7390088513807137043, guid: a3f3b82c4f4c5cd41beb62b63e346319, type: 3}
       propertyPath: m_Mesh
       value: 
