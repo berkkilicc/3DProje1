@@ -15,8 +15,9 @@ namespace Project1.Contollers
         DefaultInput _input;
         Mover _mover;
         Rotator _rotator;
+        Fuel _fuel;
 
-        bool _isForceUp;
+        bool _canForceUp;
         float _leftRight;
 
         public float TurnSpeed => _turnspeed;
@@ -27,6 +28,7 @@ namespace Project1.Contollers
             _input = new DefaultInput();
             _mover = new Mover(this);
             _rotator = new Rotator(this);
+            _fuel = GetComponent<Fuel>();
         }
 
         private void Update()
@@ -35,13 +37,14 @@ namespace Project1.Contollers
 
 
             //Input
-            if (_input.IsForceUp)
+            if (_input.IsForceUp && _fuel.IsEmpty )
             {
-                _isForceUp = true;
+                _canForceUp = true;
             }
             else
             {
-                _isForceUp = false;
+                _canForceUp = false;
+                _fuel.FuelDecrease(0.01f);
             }
 
             _leftRight = _input.LeftRight;
@@ -50,9 +53,10 @@ namespace Project1.Contollers
         private void FixedUpdate()
         {
             //fizik islemleri
-            if (_isForceUp)
+            if (_canForceUp)
             {
                 _mover.FixedTick();
+                _fuel.FuelDecrease(0.2f);
             }
 
             _rotator.FixedTick(_leftRight);
