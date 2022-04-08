@@ -37,7 +37,7 @@ namespace Project1.Contollers
 
 
             //Input
-            if (_input.IsForceUp && _fuel.IsEmpty )
+            if (_input.IsForceUp && !_fuel.IsEmpty )
             {
                 _canForceUp = true;
             }
