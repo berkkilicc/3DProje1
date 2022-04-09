@@ -32,22 +32,24 @@ namespace Project1.Contollers
             _rotator = new Rotator(this);
             _fuel = GetComponent<Fuel>();
         }
+
+        private void OnEnable()
+        {
+            GameManager.Instance.OnGameOver += HandleOnEventTriggered;
+            GameManager.Instance.OnMissionSucced += HandleOnEventTriggered;
+        }
         private void Start()
         {
             _canMove = true;
         }
-        private void OnEnable()
-        {
-            GameManager.Instance.OnGameOver += HandleOnEventTrigger;
-            GameManager.Instance.OnMissionSucced += HandleOnEventTrigger;
-        }
+        
 
        
 
         private void OnDisable()
         {
-            GameManager.Instance.OnGameOver -= HandleOnEventTrigger;
-            GameManager.Instance.OnMissionSucced -= HandleOnEventTrigger;
+            GameManager.Instance.OnGameOver -= HandleOnEventTriggered;
+            GameManager.Instance.OnMissionSucced -= HandleOnEventTriggered;
 
         }
 
@@ -87,7 +89,7 @@ namespace Project1.Contollers
 
         }
 
-        private void HandleOnEventTrigger()
+        private void HandleOnEventTriggered()
         {
             _canMove = false;
             _canForceUp = false;

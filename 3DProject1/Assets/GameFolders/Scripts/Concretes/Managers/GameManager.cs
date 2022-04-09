@@ -16,8 +16,8 @@ namespace Project1.Managers
 
         private void Awake()
         {
-           
-           
+
+            SingletonThisGameObject();
 
         }
 
@@ -36,7 +36,7 @@ namespace Project1.Managers
 
         public void GameOver()
         {
-            //uzun yazimi
+            ////uzun yazimi
             //if (OnGameOver != null)
             //{
             //    GameOver();
@@ -66,7 +66,7 @@ namespace Project1.Managers
 
         public void LoadMenuScene()
         {
-            StartCoroutine(LoadMenuSceneAsync));
+            StartCoroutine(LoadMenuSceneAsync());
         }
 
         private IEnumerator LoadMenuSceneAsync()

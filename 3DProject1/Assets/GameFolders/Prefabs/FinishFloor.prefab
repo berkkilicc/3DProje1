@@ -175,7 +175,7 @@ GameObject:
   - component: {fileID: 5895431251504468365}
   - component: {fileID: 5895431251504468364}
   - component: {fileID: 5895431251504468367}
-  - component: {fileID: 7784036879084382869}
+  - component: {fileID: 8432820692839271258}
   m_Layer: 0
   m_Name: FinishFloor
   m_TagString: Untagged
@@ -262,7 +262,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &7784036879084382869
+--- !u!114 &8432820692839271258
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -305,7 +305,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4782282035096714, guid: 4adffb0018aeda44e9263f901167af1f, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.441
+      value: -0.433
       objectReference: {fileID: 0}
     - target: {fileID: 4782282035096714, guid: 4adffb0018aeda44e9263f901167af1f, type: 3}
       propertyPath: m_LocalPosition.y
