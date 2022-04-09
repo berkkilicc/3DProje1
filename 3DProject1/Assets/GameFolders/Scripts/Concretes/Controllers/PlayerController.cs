@@ -39,6 +39,7 @@ namespace Project1.Contollers
         private void OnEnable()
         {
             GameManager.Instance.OnGameOver += HandleOnEventTrigger;
+            GameManager.Instance.OnMissionSucced += HandleOnEventTrigger;
         }
 
        
@@ -46,6 +47,7 @@ namespace Project1.Contollers
         private void OnDisable()
         {
             GameManager.Instance.OnGameOver -= HandleOnEventTrigger;
+            GameManager.Instance.OnMissionSucced -= HandleOnEventTrigger;
 
         }
 

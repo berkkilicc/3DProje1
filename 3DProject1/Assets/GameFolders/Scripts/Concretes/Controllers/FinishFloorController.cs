@@ -22,6 +22,7 @@ namespace Project1.Contollers
             {
                 _finishFireWork.gameObject.SetActive(true);
                 _finishLight.gameObject.SetActive(true);
+                GameManager.Instance.MissionSucced();
             }
             else
             {
