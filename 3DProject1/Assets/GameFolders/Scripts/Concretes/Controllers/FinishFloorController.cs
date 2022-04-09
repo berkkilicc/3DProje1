@@ -18,7 +18,7 @@ namespace Project1.Contollers
             {
                 return;
             }
-            if (other.GetContact(0).normal.y == 0)
+            if (other.GetContact(0).normal.y == -1)
             {
                 _finishFireWork.gameObject.SetActive(true);
                 _finishLight.gameObject.SetActive(true);
