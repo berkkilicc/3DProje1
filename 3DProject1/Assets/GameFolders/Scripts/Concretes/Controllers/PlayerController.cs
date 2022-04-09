@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using Project1.Movements;
 using Project1.Contollers;
 using UnityEngine;
+using Project1.Managers;
 
 namespace Project1.Contollers
 {
@@ -17,6 +18,7 @@ namespace Project1.Contollers
         Rotator _rotator;
         Fuel _fuel;
 
+        bool _canMove;
         bool _canForceUp;
         float _leftRight;
 
@@ -30,11 +32,31 @@ namespace Project1.Contollers
             _rotator = new Rotator(this);
             _fuel = GetComponent<Fuel>();
         }
+        private void Start()
+        {
+            _canMove = true;
+        }
+        private void OnEnable()
+        {
+            GameManager.Instance.OnGameOver += HandleOnEventTrigger;
+        }
+
+       
+
+        private void OnDisable()
+        {
+            GameManager.Instance.OnGameOver -= HandleOnEventTrigger;
+
+        }
 
         private void Update()
         {
             Debug.Log(_input.LeftRight);
 
+            if (!_canMove)
+            {
+                return;
+            }
 
             //Input
             if (_input.IsForceUp && !_fuel.IsEmpty )
@@ -61,6 +83,14 @@ namespace Project1.Contollers
 
             _rotator.FixedTick(_leftRight);
 
+        }
+
+        private void HandleOnEventTrigger()
+        {
+            _canMove = false;
+            _canForceUp = false;
+            _leftRight = 0f;
+            _fuel.FuelIncrease(0f);
         }
     }
 }

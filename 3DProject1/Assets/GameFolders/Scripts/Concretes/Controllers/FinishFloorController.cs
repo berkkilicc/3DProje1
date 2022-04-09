@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using Project1.Managers;
 
 namespace Project1.Contollers
 {
@@ -25,7 +26,7 @@ namespace Project1.Contollers
             else
             {
                 //GameOver
-                SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+                GameManager.Instance.GameOver();
 
             }
         }
