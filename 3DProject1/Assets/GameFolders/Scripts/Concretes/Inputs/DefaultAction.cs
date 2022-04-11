@@ -42,7 +42,7 @@ namespace UdemyProject1.Inputs
                     ""name"": ""LeftRight"",
                     ""type"": ""PassThrough"",
                     ""id"": ""f0c01a29-c21e-4799-8830-8612c8bcd4e1"",
-                    ""expectedControlType"": ""Axis"",
+                    ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": ""Press(behavior=2)"",
                     ""initialStateCheck"": false

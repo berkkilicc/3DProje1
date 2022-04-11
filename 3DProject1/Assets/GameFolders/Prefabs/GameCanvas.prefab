@@ -501,6 +501,7 @@ GameObject:
   m_Component:
   - component: {fileID: 824341108}
   - component: {fileID: 6562897921860610017}
+  - component: {fileID: 9086562520776136215}
   m_Layer: 5
   m_Name: GameOverObjects
   m_TagString: Untagged
@@ -541,6 +542,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _gameOverPanel: {fileID: 407362512}
+--- !u!114 &9086562520776136215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 824341107}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb038d1da9491e845b7c9143bb66523a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1003018697
 GameObject:
   m_ObjectHideFlags: 0
@@ -952,6 +965,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5707806142904684387}
+  - component: {fileID: 8039462615746326327}
+  - component: {fileID: 1414279427073580814}
   m_Layer: 5
   m_Name: WinConditionObjects
   m_TagString: Untagged
@@ -979,6 +994,31 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: -667}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 1}
+--- !u!114 &8039462615746326327
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3543676188922311931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 602068670c4f44644b0b7c3de769dbf7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _winConditionPanel: {fileID: 5081228690145582101}
+--- !u!114 &1414279427073580814
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3543676188922311931}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd64f75140b3e4d40b3322547782e0c7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5081228690145582101
 GameObject:
   m_ObjectHideFlags: 0
@@ -990,8 +1030,7 @@ GameObject:
   - component: {fileID: 321336190709403946}
   - component: {fileID: 8890409783369755093}
   - component: {fileID: 2114699463385384501}
-  - component: {fileID: 4791145283665035035}
-  - component: {fileID: 7383999211042170109}
+  - component: {fileID: 6619596928169694333}
   m_Layer: 5
   m_Name: WinConditionPanel
   m_TagString: Untagged
@@ -1058,7 +1097,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &4791145283665035035
+--- !u!114 &6619596928169694333
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1070,19 +1109,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd64f75140b3e4d40b3322547782e0c7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &7383999211042170109
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5081228690145582101}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 602068670c4f44644b0b7c3de769dbf7, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _winConditionPanel: {fileID: 5081228690145582101}
 --- !u!1 &6696443348321347318
 GameObject:
   m_ObjectHideFlags: 0
@@ -1204,7 +1230,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 4791145283665035035}
+      - m_Target: {fileID: 6619596928169694333}
         m_TargetAssemblyTypeName: Project1.Uis.WinConditionPanel, Assembly-CSharp
         m_MethodName: YesClicked
         m_Mode: 1
